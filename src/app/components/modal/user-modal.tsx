@@ -5,6 +5,7 @@ import Link from "next/link";
 
 interface Props {
     userId: string
+
 }
 
 const UserModal: FC<Props> = async ({ userId }) => {
@@ -21,7 +22,7 @@ const UserModal: FC<Props> = async ({ userId }) => {
         },
         {
             label: "Ülke",
-            value: user.address.country,
+            value: user?.address?.country ?,
         },
         {
             label: "Şehir",
@@ -45,7 +46,7 @@ const UserModal: FC<Props> = async ({ userId }) => {
         <div className=" fixed bg-black/10 inset-0 z-[999] backdrop-blur-[2px] grid place-items-center">
             <div className="bg-white rounded-lg shadow py-8 px-10 pb-14">
                 <div className="flex justify-end">
-                    <Link href={`/users`} className="shadow p-2 rounded-lg hover:shadow-lg hover:bg-gray-200 transition">
+                    <Link href="/users" className="shadow p-2 rounded-lg hover:shadow-lg hover:bg-gray-200 transition">
                         <MdClose />
                     </Link>
                 </div>
