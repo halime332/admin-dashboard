@@ -1,0 +1,33 @@
+---
+description: tech-stack
+alwaysApply: false
+---
+My-Stack:
+
+# Core Stack
+
+
+- Framework: Next.js
+- Language: TypeScript
+- HTTP Client: Next.js fetch API(native)
+
+# Additional Libraries
+
+- Routing: Next.js App Router (native)
+- State Management: React  Context API or Redux Toolkit
+- Styling: Tailwind CSS
+- Testing: Jest, React Testing Library My-Stack:
+
+# Core Stack
+
+
+- Framework: Next.js
+- Language: TypeScript
+- HTTP Client: Next.js fetch API(native)
+
+# Additional Libraries
+
+- Routing: Next.js App Router (native)
+- State Management: React  Context API or Redux Toolkit
+- Styling: Tailwind CSS
+- Testing: Jest, React Testing Library 

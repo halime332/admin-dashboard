@@ -1,0 +1,20 @@
+Core Stack
+
+Framework: Next.js (App Router)
+
+Language: TypeScript
+
+
+
+HTTP Client: fetch API (native)– Next.js 
+
+Additional Libraries
+
+Routing:Next.js App Router(native)
+
+State Management:React Context API veya Redux Toolkit
+Styling: Tailwind CSS
+Notification:react-toastify
+
+
+Testing: Jest + React Testing Library 

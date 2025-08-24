@@ -1,0 +1,115 @@
+---
+description: coding-preferences
+alwaysApply: false
+---
+Simplicity and Maintainability
+
+Kod her zaman basit, okunabilir ve anlaşılır olmalı.
+
+Dosya boyutunu küçük tut: 200-300 satır üstünü component / hook / util’lere ayır.
+
+app/ ve pages/ dizinlerinde dosya yapısı modüler ve mantıksal olarak ayrılmış olmalı.
+
+Avoid Duplication
+
+Yeni component eklemeden önce components/, hooks/ ve lib/ dizinlerini kontrol et.
+
+Benzer mantık varsa custom hook veya util function çıkar.
+
+Geçici olarak eski implementasyonu tut ama gereksiz tekrarları uzun vadede temizle.
+#Environment Considerations
+
+Kod, farklı ortamlar (development, test, production) için .env.* dosyalarından yapılandırılmalı.
+
+NEXT_PUBLIC_ prefix’i sadece client tarafında kullanılmalı.
+
+Environment değişiklikleri yapılırken deployment ortamları (Vercel, Docker vb.) gözetilmeli.
+
+# Scoped Changes
+
+Sadece ilgili feature, page veya component üzerinde değişiklik yap.
+
+Unrelated refactor / style / dependency ekleme.
+
+# Bug Fixes and Patterns
+
+Hata çözümünde önce mevcut pattern’leri (Next.js server actions, API routes, React Query, SWR, Redux Toolkit vb.) kullan.
+
+Yeni kütüphane eklemek gerekirse önce tartış ve onay al.
+
+# Scripts and Temporary Code
+
+Geçici scriptleri scripts/ klasörüne koy, app/ veya pages/ içine ekleme.
+
+Tek seferlik kullanım kodlarını production’a taşımadan önce sil.
+
+# Data Management
+
+Development ortamında mock data için mocks/ veya fixtures/ klasörü kullan.
+
+Production ortamına kesinlikle dummy data sokma.
+
+API isteklerinde fetch veya Axios yerine Next.js fetch (Edge uyumlu) tercih et.
+
+#Environment Files
+
+.env dosyaları asla overwrite edilmez.
+
+Ortak config için next.config.js veya app/config/ kullanılmalı.
+
+Environment değişiklikleri PR description içinde açıkça belirtilmeli.Simplicity and Maintainability
+
+Kod her zaman basit, okunabilir ve anlaşılır olmalı.
+
+Dosya boyutunu küçük tut: 200-300 satır üstünü component / hook / util’lere ayır.
+
+app/ ve pages/ dizinlerinde dosya yapısı modüler ve mantıksal olarak ayrılmış olmalı.
+
+Avoid Duplication
+
+Yeni component eklemeden önce components/, hooks/ ve lib/ dizinlerini kontrol et.
+
+Benzer mantık varsa custom hook veya util function çıkar.
+
+Geçici olarak eski implementasyonu tut ama gereksiz tekrarları uzun vadede temizle.
+#Environment Considerations
+
+Kod, farklı ortamlar (development, test, production) için .env.* dosyalarından yapılandırılmalı.
+
+NEXT_PUBLIC_ prefix’i sadece client tarafında kullanılmalı.
+
+Environment değişiklikleri yapılırken deployment ortamları (Vercel, Docker vb.) gözetilmeli.
+
+# Scoped Changes
+
+Sadece ilgili feature, page veya component üzerinde değişiklik yap.
+
+Unrelated refactor / style / dependency ekleme.
+
+# Bug Fixes and Patterns
+
+Hata çözümünde önce mevcut pattern’leri (Next.js server actions, API routes, React Query, SWR, Redux Toolkit vb.) kullan.
+
+Yeni kütüphane eklemek gerekirse önce tartış ve onay al.
+
+# Scripts and Temporary Code
+
+Geçici scriptleri scripts/ klasörüne koy, app/ veya pages/ içine ekleme.
+
+Tek seferlik kullanım kodlarını production’a taşımadan önce sil.
+
+# Data Management
+
+Development ortamında mock data için mocks/ veya fixtures/ klasörü kullan.
+
+Production ortamına kesinlikle dummy data sokma.
+
+API isteklerinde fetch veya Axios yerine Next.js fetch (Edge uyumlu) tercih et.
+
+#Environment Files
+
+.env dosyaları asla overwrite edilmez.
+
+Ortak config için next.config.js veya app/config/ kullanılmalı.
+
+Environment değişiklikleri PR description içinde açıkça belirtilmeli.
