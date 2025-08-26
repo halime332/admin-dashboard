@@ -1,10 +1,12 @@
 import { FC } from "react";
+import OrderTable from "@/app/components/table/order-table";
 
-
-const Orders:FC = () => {
+const Orders: FC = () => {
   return (
-    <div>
-      <h1>Dashboard</h1>
+    <div className="page">
+      <h1 className="title">Orders</h1>
+
+      <OrderTable />
     </div>
   )
 };

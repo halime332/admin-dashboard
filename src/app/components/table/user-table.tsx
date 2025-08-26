@@ -7,6 +7,7 @@ import DeleteButton from "../button/delete-button";
 
 const UserTable: FC = async () => {
     const users = await getUsers();
+    console.log(users);
 
     return (
         <TableWrapper>
@@ -33,7 +34,7 @@ const UserTable: FC = async () => {
                         <td>{user.orders.length}</td>
                         <td>
                             <div className="flex gap-2">
-                                <Link href={`?show=?${user.id}`} className=" button hover:bg-gray-200 border shadow rounded-md p-2 hover:shadow-lg">
+                                <Link href={`?show=${user.id}`} className=" button hover:bg-gray-200 border shadow rounded-md p-2 hover:shadow-lg">
                                     <FaEye />
                                 </Link>
 
@@ -42,6 +43,7 @@ const UserTable: FC = async () => {
                         </td>
                     </tr>
                 ))}
+
             </tbody>
         </TableWrapper>
     );

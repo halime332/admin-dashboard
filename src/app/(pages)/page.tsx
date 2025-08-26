@@ -5,33 +5,35 @@ import icon3 from "@/app/assets/images/icon-3.webp";
 import icon4 from "@/app/assets/images/icon-4.png";
 import { InfoItem } from "../types";
 import InfoCard from "../components/card/info-card";
-import Graphic from "../components/graphic";
+import OrderContainer from "../components/graphic/order-conteiner";
+import CategoryContainer from "../components/graphic/category-container";
+import { getValues } from "../utils/service";
 
-
-const App: FC = () => {
+const App: FC = async () => {
+  const values = await getValues();
   //ekrana basılacak olan kartların dizisi
 
   const cards: InfoItem[] = [
     {
       icon: icon1,
       label: "Toplam Kullanıcı",
-      value: 558,
+      value: values.total_users * 197,
     },
 
     {
       icon: icon2,
       label: "Toplam Sipariş",
-      value: 624,
+      value: values.total_orders * 197,
     },
     {
       icon: icon3,
       label: "Toplam Satış",
-      value: 200.214 + "$",
+      value: (values.total_price * 197).toLocaleString() + "$",
     },
     {
       icon: icon4,
       label: "Ürün Sayısı",
-      value: 1143,
+      value: values.total_products * 197,
     }
   ]
 
@@ -39,12 +41,20 @@ const App: FC = () => {
     <div className="page">
       <h1 className="title">Admin Paneli</h1>
 
-      <section className="grid sm:grid-cols-2 lg:grid-cols-4  gap-5 mt-5">
+      <section className=" grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-5">
         {cards.map((item, key) => <InfoCard key={key} item={item} />)}
       </section>
 
       <section>
-        <Graphic />
+        <div className="grid lg:grid-cols-3 gap-5 mt-5">
+          <div className="lg:col-span-2">
+            <OrderContainer />
+          </div>
+        </div>
+
+        <div className="lg:col-span-1">
+          <CategoryContainer />
+        </div>
       </section>
     </div>
   );

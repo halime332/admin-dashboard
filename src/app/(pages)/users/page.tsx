@@ -8,7 +8,7 @@ import UserModal from "@/app/components/modal/user-modal";
 interface Props {
   searchParams: Promise<{
     show?: string
-  }>
+  }>;
 }
 
 

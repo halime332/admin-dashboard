@@ -27,8 +27,8 @@ const LineGraph: FC<LineGraphProps> = ({ orders }) => {
   };
 
   return (
-    <div>
-      <Line data={data} options={{ responsive: true }} />
+    <div className="w-full h-full ">
+      <Line data={data} options={{ responsive: true }} className="!w-full !h-full" />
     </div>
   )
 };
