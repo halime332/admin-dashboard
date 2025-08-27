@@ -45,11 +45,9 @@ const App: FC = async () => {
         {cards.map((item, key) => <InfoCard key={key} item={item} />)}
       </section>
 
-      <section>
-        <div className="grid lg:grid-cols-3 gap-5 mt-5">
-          <div className="lg:col-span-2">
-            <OrderContainer />
-          </div>
+      <section className="grid lg:grid-cols-3 gap-5 mt-5">
+        <div className="lg:col-span-2">
+          <OrderContainer />
         </div>
 
         <div className="lg:col-span-1">
